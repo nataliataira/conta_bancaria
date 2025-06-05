@@ -1,11 +1,13 @@
 import readlinesync from 'readline-sync';
 import { colors } from './src/util/Colors';
 import { Conta } from './src/model/Conta';
+import { ContaPoupanca } from './src/model/ContaPoupanca';
+import { ContaCorrente } from './src/model/ContaCorrente';
 
 export function main() {
     let option: number;
 
-    const teste1: Conta = new Conta(10001, 10001, 1, "Claudia Rodrigues", 2350.40);
+    const teste1: ContaPoupanca = new ContaPoupanca(10001, 10001, 1, "Claudia Rodrigues", 2350.40, 2);
     teste1.visualizar();
     teste1.sacar(350.40);
     teste1.visualizar();
@@ -13,7 +15,7 @@ export function main() {
     teste1.depositar(500);
     teste1.visualizar();
 
-    const teste2: Conta = new Conta(10002, 10001, 2, "Claudia Rodrigues", 60456.40);
+    const teste2: ContaCorrente = new ContaCorrente(10002, 10001, 2, "Claudia Rodrigues", 60456.40, 2000);
     teste2.visualizar();
     teste2.sacar(-350.40); //tenta sacar um valor negativo
     teste2.visualizar();
