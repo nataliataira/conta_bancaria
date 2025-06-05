@@ -13,51 +13,47 @@ export class Conta {
         this._saldo = saldo;
     }
 
-    public setNumero(numero : number) {
+    public set numero(numero : number) {
         this._numero = numero;
     }
 
-    public getNumero() : number {
+    public get numero() : number {
         return this._numero;
     }
     
-    public setAgencia(agencia : number) {
+    public set agencia(agencia : number) {
         this._agencia = agencia;
     }
 
-    public getAgencia() : number {
+    public get agencia() : number {
         return this._agencia;
     }
     
-    public setTipo(tipo : number) {
+    public set tipo(tipo : number) {
         this._tipo = tipo;
     }
 
-    public getTipo() : number {
+    public get tipo() : number {
         return this._tipo;
     }
     
-    public setTitular(titular : string) {
+    public set titular(titular : string) {
         this._titular = titular;
     }
 
-    public getTitular() : string {
+    public get titular() : string {
         return this._titular;
     }
     
-    public setSaldo(saldo : number) {
+    public set saldo(saldo : number) {
         this._saldo = saldo;
     }
 
-    public getSaldo() : number {
+    public get saldo() : number {
         return this._saldo;
     }
 
-    /**
-     * 
-     * @param valorSaque 
-     * @returns 
-     */
+
     public sacar(valorSaque: number) : boolean {
         if (this._saldo < valorSaque) {
             console.log('\n Saldo insuficiente!');
@@ -69,11 +65,6 @@ export class Conta {
         return true;
     }
 
-    /**
-     * 
-     * @param valorDeposito 
-     * @returns 
-     */
     public depositar(valorDeposito: number) : boolean {
         if (valorDeposito < 0) {
             console.log('\n Insira um valor válido para depósito.');
@@ -83,9 +74,6 @@ export class Conta {
         return true;
     }
 
-    /**
-     * 
-     */
     public visualizar() : void {
         let tipo: string = "";
 
